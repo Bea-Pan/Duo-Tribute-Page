@@ -13,29 +13,26 @@ body {
 /*HEADER*/
 header {
   width:100%;
-  border: 1px pink solid;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 #container {
-  display: flex;
-  border: 1px solid purple;
+  display: flex; 
   align-items: flex-end;
 }
 
 #title {
   display:flex;
   flex-direction: column;
-  margin-top: -3rem;
-  border: red 1px solid;
+  margin-top: -3rem; 
 } 
 
 #img-duo {
   width: 100%; 
   height: auto; 
   max-width: 160px;
-  border: 1px solid red;
 }
 
 h1 {
@@ -56,12 +53,16 @@ nav{
   display: flex;
   justify-content: right;
   height: 80px;
+ 
+  
 }
 nav ul{
-background-color:#ffc715;
-border-radius: 50px 15px;
-margin-top:5px;
-padding-top:10px;
+  background-color:#ffc715;
+  border-radius: 50px 15px;
+  margin-top:5px;
+  padding-top:10px;
+  min-width: 100%;
+  
 }
 nav li{
   display: inline-block;
@@ -76,13 +77,124 @@ nav li{
 }
 
 nav li a {
-color: black;
+  color: black;
 }
 
-nav li:link {
-  color: green;
+/*CONTENT*/
+.row {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: no-wrap;
 }
 
+.column {
+  
+  padding: 15px; 
+}
+
+#column1 {
+  max-width: 60%;
+   border-right: 6px groove #ffc715;
+ }
+#column2 {
+  max-width: 40%;
+  /* min-width: 30%; */
+  }
+
+  /* MOBILE */
+@media only screen and (max-width:700px){
+
+  nav{
+    min-width: 100%;
+  }
+  
+  nav ul { 
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    border-radius: 0;
+  }
+
+  nav li {
+    margin-left: -30px;
+  }
+
+
+  header{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  h1, h2 {
+    text-align: left;
+    color:red;
+  }
+
+  .row {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  #column1 {
+    min-width: 100%;
+    border-right: none;
+    border-bottom: 6px groove #ffc715;
+   }
+
+  #column2 {
+    max-width: none;
+    } 
+
+ 
+
+    #column-inside1 {
+      min-width: 100%;
+      
+    }
+     #column-inside2 {
+       min-width:100%;
+       float: none;
+     }
+   
+   .row-inside{
+     /* display: flex;
+     align-items: flex-end; */
+     flex-wrap: wrap;
+   }
+}
+
+
+/* TABLET */
+
+@media only screen and (max-width:1024px) and (min-width: 700px) {
+
+  header{
+    flex-direction: column-reverse;
+  }
+
+  .row {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  #column1 {
+    min-width: 100%;
+    border-right: none;
+    border-bottom: 6px groove #ffc715;
+   }
+  #column2 {
+    max-width: none;
+    }
+
+}
+
+/* LAPTOP */
+
+@media screen and (min-width: 1024px) {
+  
+}
 
 
 
@@ -90,13 +202,11 @@ nav li:link {
 h3 {
  color:#ffc715;                                                                      
 }
-.img-2 {
+.img-duo-2 {
   width: 260px;
   height: auto;
   transform: rotateY(180deg);
-  /* float: right; */
 }
-
 
 p {
   font-size: 18.5px;
@@ -115,48 +225,48 @@ li {
   padding-bottom:20px;
 }
 #quote {
-                                        color:#ffc715;
+  color:#ffc715;
   font-size: 25px;
   font-family:'Bradley Hand';
+  margin-top:2rem;
 }
 /* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  padding: 15px; 
-}
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-#column1 {
-   width:60%;
-   border-right: 6px groove #ffc715;
- }
-#column2 {
-  width:40%;
-  
-  }
+
 
 /*INSIDE COLUMNS/*
 /* Create two equal columns that floats next to each other */
+/*
+
 .column-in {
   float: left;
   padding: 10px;
   }
-/* Clear floats after the columns */
+/* Clear floats after the columns 
 .row-inside:after {
   content: "";
   display: table;
   clear: both;
 }
+*/
  #column-inside1 {
-   width:60%;
+   width: 60%;
    
  }
   #column-inside2 {
     width:40%;
-    
     float:right;
   }
+
+
+.row-inside{
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
