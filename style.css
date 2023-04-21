@@ -183,6 +183,10 @@ li {
     font-size: 20px;
   }
 
+  .cajas{
+    float: none;
+  }
+
   .row {
     display: flex;
     justify-content: flex-start;
