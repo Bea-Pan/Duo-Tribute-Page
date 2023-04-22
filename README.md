@@ -27,4 +27,4 @@ To achieve goals & objectives I used the follwing:
 
 ## Live Website 
 
-Wild Africa Trail Experience website can be viewed [here](https://bea-pan.github.io/Duo-Tribute-Page/)
+Duo Owl Tribute website can be viewed [here](https://bea-pan.github.io/Duo-Tribute-Page/)
